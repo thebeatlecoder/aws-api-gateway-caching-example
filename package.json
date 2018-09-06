@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "serverless": "^1.30.3",
+    "serverless-plugin-bind-deployment-id": "^1.0.1",
     "serverless-pseudo-parameters": "^2.2.0"
   }
 }

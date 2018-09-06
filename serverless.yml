@@ -11,6 +11,7 @@ provider:
 
 plugins:
   - serverless-pseudo-parameters
+  - serverless-plugin-bind-deployment-id
 
 custom:
   stage: ${opt:stage, self:provider.stage}
@@ -39,5 +40,37 @@ functions:
     
 resources:
   Resources:
+    __deployment__:
+      Properties:
+        Description: Deploying the Cat API. Meow.
+    ApiGatewayStage:
+      Type: "AWS::ApiGateway::Stage"
+      Properties:
+        CacheClusterEnabled: ${self:custom.variables.cachingIsEnabled}
+        CacheClusterSize: 0.5
+        MethodSettings:
+          - ResourcePath: "/*"
+            HttpMethod: "*"
+            CachingEnabled: false
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        DeploymentId:
+          Ref: __deployment__
+        StageName: ${self:custom.stage}
+    ApiGatewayMethodCatsPawidVarGet:
+      Properties:
+        HttpMethod: GET
+        #CacheTtlInSeconds: 3600 <-- this is not a valid field; I assume you can set a TTL per endpoint though?
+        RequestParameters:
+          method.request.path.pawId: true
+          method.request.header.Accept-Language: true
+        Integration:
+          RequestParameters:
+            integration.request.path.pawId: method.request.path.pawId
+            integration.request.header.Accept-Language: method.request.header.Accept-Language
+          CacheNamespace: ApiGatewayMethodCatsPawidVarGetCacheNS
+          CacheKeyParameters:
+            - method.request.path.pawId
+            - method.request.header.Accept-Language
     listCatsRole: ${file(security/roles/listCatsRole.yml)}
     getCatRole: ${file(security/roles/getCatRole.yml)}
