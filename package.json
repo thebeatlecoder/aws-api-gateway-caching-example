@@ -1,0 +1,32 @@
+{
+  "name": "aws-api-gateway-caching-example",
+  "version": "1.0.0",
+  "description": "An example of how to configure API Gateway response caching.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebeatlecoder/aws-api-gateway-caching-example.git"
+  },
+  "keywords": [
+    "aws",
+    "apigateway",
+    "rest",
+    "response",
+    "caching"
+  ],
+  "author": "thebeatlecoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebeatlecoder/aws-api-gateway-caching-example/issues"
+  },
+  "homepage": "https://github.com/thebeatlecoder/aws-api-gateway-caching-example#readme",
+  "dependencies": {
+    "bluebird": "^3.5.2"
+  },
+  "devDependencies": {
+    "serverless": "^1.30.3",
+    "serverless-pseudo-parameters": "^2.2.0"
+  }
+}

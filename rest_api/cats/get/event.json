@@ -1,0 +1,62 @@
+{
+  "resource": "/corporate/challenges/{challengeId}/teams/leaderboard/{date}",
+  "path": "/scott-team-api/corporate/challenges/f19418bb-eae7-4223-8e96-a6e0a849cb07/teams/leaderboard/2018-06-14",
+  "httpMethod": "GET",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "cache-control": "no-cache",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "GB",
+    "Content-Type": "application/json",
+    "Host": "apigateway.dev.rs.lifeworks.com",
+    "Postman-Token": "b17749e7-2caa-49e2-92d9-433605181a9d",
+    "User-Agent": "PostmanRuntime/7.1.1",
+    "Via": "1.1 ba3ec7db4ff51789a8c88923c683e24c.cloudfront.net (CloudFront)",
+    "Wam-Token": "po7a5db9ce26efbe5d3d899f21bedcb1e5c85db9ce26efbe5d3d899f21bedcb1e5c8",
+    "X-Amz-Cf-Id": "YClb7lXGnX1jSwFX0KpvzNaB4zV4PBg3CJgdGQ6MOPViOOxg00iTCA==",
+    "X-Amzn-Trace-Id": "Root=1-5b22e1f1-eafc9dbcdffa6200ce0e3bac",
+    "X-Forwarded-For": "109.145.13.139, 54.239.166.14",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "queryStringParameters": null,
+  "pathParameters": {
+    "date": "2018-06-14",
+    "challengeId": "f19418bb-eae7-4223-8e96-a6e0a849cb07"
+  },
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "vjq6wn",
+    "resourcePath": "/corporate/challenges/{challengeId}/teams/leaderboard/{date}",
+    "httpMethod": "GET",
+    "extendedRequestId": "Ifg9tGPqLPEFvLA=",
+    "requestTime": "14/Jun/2018:21:45:21 +0000",
+    "path": "/scott-team-api/corporate/challenges/f19418bb-eae7-4223-8e96-a6e0a849cb07/teams/leaderboard/2018-06-14",
+    "accountId": "755524103935",
+    "protocol": "HTTP/1.1",
+    "stage": "devscott",
+    "requestTimeEpoch": 1529012721347,
+    "requestId": "3ca261d0-701c-11e8-b927-0b011a0f042d",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "109.145.13.139",
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "PostmanRuntime/7.1.1",
+      "user": null
+    },
+    "apiId": "0m8k8e1233"
+  },
+  "body": null,
+  "isBase64Encoded": false
+}

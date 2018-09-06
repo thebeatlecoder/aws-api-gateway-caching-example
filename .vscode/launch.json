@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch list-all-cats",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/serverless/bin/serverless",
+      "stopOnEntry": false,
+      "args": [
+        "invoke",
+        "local",
+        "-f",
+        "list-all-cats",
+        "--path",
+        "rest_api/cats/get/event.json"
+      ],
+      "cwd": "${workspaceRoot}",
+      "env": {
+        "AWS_REGION": "eu-west-2"
+      }
+    }
+  ]
+}

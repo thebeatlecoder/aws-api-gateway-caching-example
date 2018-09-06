@@ -1,0 +1,11 @@
+Type: AWS::IAM::Role
+Properties:
+  Path: /
+  RoleName: getCat-${self:custom.stage}-${self:custom.region}-lambdaRole
+  AssumeRolePolicyDocument: ${file(security/permissions/assumeRole.yml)}
+  Policies:
+    - PolicyName: getCat-${self:custom.stage}-${self:custom.region}-Policy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - ${file(security/permissions/logging.yml)}
