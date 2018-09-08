@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "serverless": "^1.30.3",
+    "serverless-api-gateway-caching": "^1.0.0-rc14",
     "serverless-pseudo-parameters": "^2.2.0"
   }
 }

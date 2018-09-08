@@ -5,6 +5,10 @@ provider:
   runtime: nodejs8.10
   stage: dev${env:USER, env:USERNAME}
   region: eu-west-2
+  apiGatewayCaching:
+    false: true
+    clusterSize: '0.5'
+    ttlInSeconds: 300
   environment:
     STAGE: ${self:custom.stage}
     DEBUG_LOGGING_IS_ENABLED: ${self:custom.variables.debugLoggingIsEnabled}
@@ -36,6 +40,14 @@ functions:
       - http:
           path: /cats/{pawId}
           method: get
+          caching:
+            enabled: true
+            ttlInSeconds: 3600
+            cacheKeyParameters:
+              - name: request.path.pawId
+                required: true
+              - name: request.header.Accept-Language
+                required: true
     
 resources:
   Resources:
